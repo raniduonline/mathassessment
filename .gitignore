@@ -11,7 +11,7 @@
 
 # next.js
 /.next/
-# /out/ - We need this for GitHub Pages
+/out/
 
 # production
 /build
@@ -33,8 +33,4 @@ yarn-error.log*
 
 # typescript
 *.tsbuildinfo
-next-env.d.ts
-
-# IDE files
-.idea/
-.vscode/ 
+next-env.d.ts 

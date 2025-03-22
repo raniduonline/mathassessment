@@ -1,57 +1,66 @@
 # Grade 1 Math Assessment
 
-A kid-friendly web application designed to assess Grade 1 math skills according to educational standards. This application helps parents and educators evaluate a child's understanding of fundamental math concepts in an engaging, colorful interface.
+A kid-friendly web application for assessing Grade 1 math skills, built with Next.js and React.
 
 ## Features
 
-- **Interactive Assessment**: 20 questions covering four key areas of Grade 1 math
-- **Section-Based Structure**: Organized by math skill areas for targeted evaluation
-- **Kid-Friendly Design**: Colorful, engaging interface with animations
-- **Comprehensive Results**: Detailed feedback with strengths and areas for improvement
-- **Parent Resources**: Curated activities and resources for each math skill area
-
-## Math Areas Covered
-
-1. **Number Sense & Place Value**
-2. **Addition & Subtraction**
-3. **Measurement & Data**
-4. **Geometry**
+- **Interactive Assessment**: 20 questions covering key Grade 1 math concepts
+- **Kid-Friendly Design**: Colorful, engaging interface designed for young learners
+- **Four Core Math Areas**:
+  - Number Sense & Place Value
+  - Addition & Subtraction
+  - Measurement & Data
+  - Geometry
+- **Detailed Results**: Assessment results with section-by-section breakdown
+- **Parent Resources**: Comprehensive guide with activities and resources for parents
 
 ## Technology Stack
 
-- Next.js
-- React
-- TypeScript
-- Tailwind CSS
+- [Next.js](https://nextjs.org/) - React framework
+- [React](https://reactjs.org/) - UI library
+- [TypeScript](https://www.typescriptlang.org/) - Type-safe JavaScript
+- [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS framework
 
 ## Getting Started
 
-To run this project locally:
+### Prerequisites
 
+- Node.js 14.x or later
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
 ```bash
-# Clone the repository
-git clone [repository-url]
-
-# Navigate to the project directory
-cd grade-1-math-assessment
-
-# Install dependencies
-npm install
-
-# Run the development server
-npm run dev
+git clone https://github.com/raniduonline/mathassessment.git
+cd mathassessment
 ```
 
-Open [http://localhost:3000](http://localhost:3000) in your browser to see the application.
+2. Install dependencies:
+```bash
+npm install
+# or
+yarn install
+```
+
+3. Run the development server:
+```bash
+npm run dev
+# or
+yarn dev
+```
+
+4. Open [http://localhost:3000](http://localhost:3000) in your browser to see the application.
 
 ## Deployment
 
-This project is deployed using GitHub Pages. To deploy your own version:
-
-```bash
-npm run deploy
-```
+The application is deployed at [https://raniduonline.github.io/mathassessment](https://raniduonline.github.io/mathassessment)
 
 ## License
 
-This project is open source and available under the [MIT License](LICENSE). 
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Acknowledgements
+
+- Designed for Grade 1 students following educational standards
+- Inspired by modern educational technology and interactive learning principles 
