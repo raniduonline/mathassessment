@@ -1,66 +1,44 @@
 # Grade 1 Math Assessment
 
-A kid-friendly web application for assessing Grade 1 math skills, built with Next.js and React.
+A kid-friendly web application to assess Grade 1 math skills, following curriculum standards. This app provides an interactive assessment with colorful visuals and immediate feedback.
 
 ## Features
 
-- **Interactive Assessment**: 20 questions covering key Grade 1 math concepts
-- **Kid-Friendly Design**: Colorful, engaging interface designed for young learners
-- **Four Core Math Areas**:
-  - Number Sense & Place Value
-  - Addition & Subtraction
-  - Measurement & Data
-  - Geometry
-- **Detailed Results**: Assessment results with section-by-section breakdown
-- **Parent Resources**: Comprehensive guide with activities and resources for parents
+- **Interactive Assessment**: 20 questions covering four key areas of Grade 1 math
+- **Parent Resources**: Detailed checklist with activities and resources for parents
+- **Kid-Friendly Design**: Colorful interface with animations designed for young learners
+- **Detailed Results**: Comprehensive breakdown of strengths and areas for improvement
 
-## Technology Stack
+## Key Areas Covered
 
-- [Next.js](https://nextjs.org/) - React framework
-- [React](https://reactjs.org/) - UI library
-- [TypeScript](https://www.typescriptlang.org/) - Type-safe JavaScript
-- [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS framework
+1. Number Sense & Place Value
+2. Addition & Subtraction
+3. Measurement & Data
+4. Geometry
+
+## Technologies Used
+
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
 
 ## Getting Started
 
-### Prerequisites
-
-- Node.js 14.x or later
-- npm or yarn
-
-### Installation
-
-1. Clone the repository:
 ```bash
-git clone https://github.com/raniduonline/mathassessment.git
-cd mathassessment
-```
-
-2. Install dependencies:
-```bash
+# Install dependencies
 npm install
-# or
-yarn install
-```
 
-3. Run the development server:
-```bash
+# Run the development server
 npm run dev
-# or
-yarn dev
 ```
 
-4. Open [http://localhost:3000](http://localhost:3000) in your browser to see the application.
+Open [http://localhost:3000](http://localhost:3000) in your browser to see the application.
 
 ## Deployment
 
-The application is deployed at [https://raniduonline.github.io/mathassessment](https://raniduonline.github.io/mathassessment)
+The application is deployed on Vercel.
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## Acknowledgements
-
-- Designed for Grade 1 students following educational standards
-- Inspired by modern educational technology and interactive learning principles 
+MIT 

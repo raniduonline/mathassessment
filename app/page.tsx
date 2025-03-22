@@ -1,8 +1,8 @@
 'use client';
 
 import { useState } from 'react';
+import Link from 'next/link';
 import Image from 'next/image';
-import CustomLink from './components/CustomLink';
 
 export default function Home() {
   const [childName, setChildName] = useState('');
@@ -40,12 +40,12 @@ export default function Home() {
         />
         
         <div className="mt-8 flex flex-col space-y-4">
-          <CustomLink
+          <Link
             href={`/assessment?name=${encodeURIComponent(childName || 'Friend')}`}
             className="kid-button bg-kid-blue hover:bg-blue-400 text-center text-xl"
           >
             Start Assessment 🚀
-          </CustomLink>
+          </Link>
           
           <button
             onClick={() => setShowInstructions(!showInstructions)}
@@ -54,12 +54,12 @@ export default function Home() {
             {showInstructions ? 'Hide Instructions 📝' : 'Show Instructions 📝'}
           </button>
           
-          <CustomLink
+          <Link
             href="/parents"
             className="kid-button bg-kid-green hover:bg-green-400 text-center text-xl"
           >
             Parents Resources & Checklist 👨‍👩‍👧‍👦
-          </CustomLink>
+          </Link>
         </div>
       </div>
 
