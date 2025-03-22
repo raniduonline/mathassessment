@@ -38,11 +38,57 @@ jobs:
         run: npm run build
         env:
           NODE_ENV: production
+          NEXT_PUBLIC_BASE_PATH: /mathassessment
 
-      - name: Add .nojekyll file
+      - name: Add special files for GitHub Pages
         run: |
           touch out/.nojekyll
           cp -r public/* out/
+          echo 'window.env = { NEXT_PUBLIC_BASE_PATH: "/mathassessment" };' > out/env-config.js
+          echo '/* /index.html 200' > out/_redirects
+          
+          # Create GitHub 404 page handler
+          cat > out/404.html << EOL
+          <!DOCTYPE html>
+          <html>
+            <head>
+              <meta charset="utf-8">
+              <title>Redirecting...</title>
+              <script>
+                // Single Page Apps for GitHub Pages
+                // MIT License - https://github.com/rafgraph/spa-github-pages
+                var pathSegmentsToKeep = 1;
+                var l = window.location;
+                l.replace(
+                  l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+                  l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + '/?p=/' +
+                  l.pathname.slice(1).split('/').slice(pathSegmentsToKeep).join('/').replace(/&/g, '~and~') +
+                  (l.search ? '&q=' + l.search.slice(1).replace(/&/g, '~and~') : '') +
+                  l.hash
+                );
+              </script>
+            </head>
+            <body>
+              <h1>Redirecting...</h1>
+            </body>
+          </html>
+          EOL
+          
+          # Update index.html to handle redirects
+          sed -i '/<head>/a \
+          <script>\
+          // Single Page Apps for GitHub Pages redirect script\
+          (function(l) {\
+            if (l.search[1] === "/" ) {\
+              var decoded = l.search.slice(1).split("&").map(function(s) { \
+                return s.replace(/~and~/g, "&")\
+              }).join("?");\
+              window.history.replaceState(null, null,\
+                l.pathname.slice(0, -1) + decoded + l.hash\
+              );\
+            }\
+          }(window.location))\
+          </script>' out/index.html
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
